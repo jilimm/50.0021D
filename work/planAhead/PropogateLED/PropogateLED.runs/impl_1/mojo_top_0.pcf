@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Nov 19 19:10:25 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
+COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
+COMP "high1" LOCATE = SITE "P142" LEVEL 1;
+COMP "high2" LOCATE = SITE "P140" LEVEL 1;
+COMP "high3" LOCATE = SITE "P138" LEVEL 1;
+COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
+COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
+COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
+TIMEGRP clk = BEL "myBlinker/M_counter_q_0" BEL "myBlinker/M_counter_q_1" BEL
+        "myBlinker/M_counter_q_2" BEL "clk_BUFGP/BUFG" BEL
+        "reset_cond/M_stage_q_3" BEL "reset_cond/M_stage_q_2" BEL
+        "reset_cond/M_stage_q_1" BEL "reset_cond/M_stage_q_0";
+TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+SCHEMATIC END;
+
