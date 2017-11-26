@@ -12,6 +12,7 @@ module mojo_top_0 (
     output reg high3,
     output reg low1,
     output reg low2,
+    output reg [23:0] io_led,
     input cclk,
     output reg spi_miso,
     input spi_ss,
@@ -20,47 +21,46 @@ module mojo_top_0 (
     output reg [3:0] spi_channel,
     input avr_tx,
     output reg avr_rx,
-    input avr_rx_busy,
-    input button,
-    input button2
+    input avr_rx_busy
   );
   
   
   
-  reg [1:0] rand;
-  
-  wire [2-1:0] M_ctr_value;
-  counter_1 ctr (
+  wire [2-1:0] M_myrandomizer_num;
+  reg [2-1:0] M_myrandomizer_rowNum;
+  randomize_1 myrandomizer (
     .clk(clk),
     .rst(rst),
-    .value(M_ctr_value)
+    .rowNum(M_myrandomizer_rowNum),
+    .num(M_myrandomizer_num)
+  );
+  wire [2-1:0] M_mypropogater_rowLit;
+  wire [2-1:0] M_mypropogater_numOut;
+  wire [1-1:0] M_mypropogater_row1;
+  wire [1-1:0] M_mypropogater_row2;
+  wire [1-1:0] M_mypropogater_row3;
+  reg [2-1:0] M_mypropogater_num;
+  propogate_2 mypropogater (
+    .clk(clk),
+    .rst(rst),
+    .num(M_mypropogater_num),
+    .rowLit(M_mypropogater_rowLit),
+    .numOut(M_mypropogater_numOut),
+    .row1(M_mypropogater_row1),
+    .row2(M_mypropogater_row2),
+    .row3(M_mypropogater_row3)
   );
   
   always @* begin
-    high1 = 1'h0;
-    high2 = 1'h0;
-    high3 = 1'h0;
-    rand = 2'h2;
-    
-    case (M_ctr_value)
-      2'h0: begin
-        high1 = 1'h1;
-        high2 = 1'h0;
-        high3 = 1'h0;
-      end
-      2'h1: begin
-        high1 = 1'h0;
-        high2 = 1'h1;
-        high3 = 1'h0;
-      end
-      2'h3: begin
-        high1 = 1'h0;
-        high2 = 1'h0;
-        high3 = 1'h0;
-      end
-    endcase
-    low1 = ~rand[0+0-:1];
-    low2 = ~rand[1+0-:1];
+    M_mypropogater_num = M_myrandomizer_num;
+    io_led[0+0+0-:1] = M_myrandomizer_num[0+0-:1];
+    io_led[0+1+0-:1] = M_myrandomizer_num[1+0-:1];
+    M_myrandomizer_rowNum = M_mypropogater_rowLit;
+    high1 = M_mypropogater_row1;
+    high2 = M_mypropogater_row2;
+    high3 = M_mypropogater_row3;
+    low1 = M_mypropogater_row1;
+    low2 = M_mypropogater_row2;
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;

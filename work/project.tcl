@@ -5,7 +5,7 @@ set device xc6slx9-2tqg144
 if {[file exists "$projDir/$projName"]} { file delete -force "$projDir/$projName" }
 create_project $projName "$projDir/$projName" -part $device
 set_property design_mode RTL [get_filesets sources_1]
-set verilogSources [list "C:/Users/Jing Yun/Documents/GitHub/50.0021D/work/verilog/mojo_top_0.v" "C:/Users/Jing Yun/Documents/GitHub/50.0021D/work/verilog/counter_1.v"]
+set verilogSources [list "C:/Users/Jing Yun/Documents/GitHub/50.0021D/work/verilog/mojo_top_0.v" "C:/Users/Jing Yun/Documents/GitHub/50.0021D/work/verilog/randomize_1.v" "C:/Users/Jing Yun/Documents/GitHub/50.0021D/work/verilog/propogate_2.v" "C:/Users/Jing Yun/Documents/GitHub/50.0021D/work/verilog/pn_gen_3.v" "C:/Users/Jing Yun/Documents/GitHub/50.0021D/work/verilog/counter_4.v"]
 import_files -fileset [get_filesets sources_1] -force -norecurse $verilogSources
 set ucfSources [list "C:/Users/Jing\ Yun/Documents/GitHub/50.0021D/constraint/custom.ucf" "C:/Program\ Files/Mojo\ IDE/library/components/mojo.ucf"]
 import_files -fileset [get_filesets constrs_1] -force -norecurse $ucfSources

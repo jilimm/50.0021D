@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Nov 26 13:50:02 2017
+// Written by: Map P.20131013 on Sun Nov 26 17:20:57 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -11,23 +11,92 @@ COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
 COMP "high1" LOCATE = SITE "P142" LEVEL 1;
 COMP "high2" LOCATE = SITE "P140" LEVEL 1;
 COMP "high3" LOCATE = SITE "P138" LEVEL 1;
-COMP "button" LOCATE = SITE "P58" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "low1" LOCATE = SITE "P22" LEVEL 1;
-COMP "button2" LOCATE = SITE "P67" LEVEL 1;
 COMP "low2" LOCATE = SITE "P24" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
-TIMEGRP clk = BEL "ctr/M_ctr_q_0" BEL "ctr/M_ctr_q_1" BEL "ctr/M_ctr_q_2" BEL
-        "ctr/M_ctr_q_3" BEL "ctr/M_ctr_q_4" BEL "ctr/M_ctr_q_5" BEL
-        "ctr/M_ctr_q_6" BEL "ctr/M_ctr_q_7" BEL "ctr/M_ctr_q_8" BEL
-        "ctr/M_ctr_q_9" BEL "ctr/M_ctr_q_10" BEL "ctr/M_ctr_q_11" BEL
-        "ctr/M_ctr_q_12" BEL "ctr/M_ctr_q_13" BEL "ctr/M_ctr_q_14" BEL
-        "ctr/M_ctr_q_15" BEL "ctr/M_ctr_q_16" BEL "ctr/M_ctr_q_17" BEL
-        "ctr/M_ctr_q_18" BEL "ctr/M_ctr_q_19" BEL "ctr/M_ctr_q_20" BEL
-        "ctr/M_ctr_q_21" BEL "ctr/M_ctr_q_22" BEL "ctr/M_ctr_q_23" BEL
-        "ctr/M_ctr_q_24" BEL "ctr/M_ctr_q_25" BEL "ctr/M_ctr_q_26" BEL
-        "ctr/M_ctr_q_27" BEL "clk_BUFGP/BUFG";
+TIMEGRP clk = BEL "mypropogater/ctr/M_ctr_q_0" BEL
+        "mypropogater/ctr/M_ctr_q_1" BEL "mypropogater/ctr/M_ctr_q_2" BEL
+        "mypropogater/ctr/M_ctr_q_3" BEL "mypropogater/ctr/M_ctr_q_4" BEL
+        "mypropogater/ctr/M_ctr_q_5" BEL "mypropogater/ctr/M_ctr_q_6" BEL
+        "mypropogater/ctr/M_ctr_q_7" BEL "mypropogater/ctr/M_ctr_q_8" BEL
+        "mypropogater/ctr/M_ctr_q_9" BEL "mypropogater/ctr/M_ctr_q_10" BEL
+        "mypropogater/ctr/M_ctr_q_11" BEL "mypropogater/ctr/M_ctr_q_12" BEL
+        "mypropogater/ctr/M_ctr_q_13" BEL "mypropogater/ctr/M_ctr_q_14" BEL
+        "mypropogater/ctr/M_ctr_q_15" BEL "mypropogater/ctr/M_ctr_q_16" BEL
+        "mypropogater/ctr/M_ctr_q_17" BEL "mypropogater/ctr/M_ctr_q_18" BEL
+        "mypropogater/ctr/M_ctr_q_19" BEL "mypropogater/ctr/M_ctr_q_20" BEL
+        "mypropogater/ctr/M_ctr_q_21" BEL "mypropogater/ctr/M_ctr_q_22" BEL
+        "mypropogater/ctr/M_ctr_q_23" BEL "mypropogater/ctr/M_ctr_q_24" BEL
+        "mypropogater/ctr/M_ctr_q_25" BEL "mypropogater/ctr/M_ctr_q_26" BEL
+        "mypropogater/ctr/M_ctr_q_27" BEL "mypropogater/ctr/M_ctr_q_28" BEL
+        "mypropogater/ctr/M_ctr_q_29" BEL "mypropogater/ctr/M_ctr_q_30" BEL
+        "mypropogater/ctr/M_ctr_q_31" BEL "myrandomizer/pn_gen/M_y_q_31" BEL
+        "myrandomizer/pn_gen/M_y_q_29" BEL "myrandomizer/pn_gen/M_y_q_28" BEL
+        "myrandomizer/pn_gen/M_y_q_27" BEL "myrandomizer/pn_gen/M_y_q_26" BEL
+        "myrandomizer/pn_gen/M_y_q_24" BEL "myrandomizer/pn_gen/M_y_q_23" BEL
+        "myrandomizer/pn_gen/M_y_q_22" BEL "myrandomizer/pn_gen/M_y_q_18" BEL
+        "myrandomizer/pn_gen/M_y_q_15" BEL "myrandomizer/pn_gen/M_y_q_12" BEL
+        "myrandomizer/pn_gen/M_y_q_11" BEL "myrandomizer/pn_gen/M_y_q_10" BEL
+        "myrandomizer/pn_gen/M_y_q_8" BEL "myrandomizer/pn_gen/M_y_q_7" BEL
+        "myrandomizer/pn_gen/M_y_q_6" BEL "myrandomizer/pn_gen/M_y_q_4" BEL
+        "myrandomizer/pn_gen/M_y_q_3" BEL "myrandomizer/pn_gen/M_y_q_1" BEL
+        "myrandomizer/pn_gen/M_z_q_31" BEL "myrandomizer/pn_gen/M_z_q_30" BEL
+        "myrandomizer/pn_gen/M_z_q_26" BEL "myrandomizer/pn_gen/M_z_q_24" BEL
+        "myrandomizer/pn_gen/M_z_q_23" BEL "myrandomizer/pn_gen/M_z_q_20" BEL
+        "myrandomizer/pn_gen/M_z_q_19" BEL "myrandomizer/pn_gen/M_z_q_18" BEL
+        "myrandomizer/pn_gen/M_z_q_17" BEL "myrandomizer/pn_gen/M_z_q_15" BEL
+        "myrandomizer/pn_gen/M_z_q_14" BEL "myrandomizer/pn_gen/M_z_q_10" BEL
+        "myrandomizer/pn_gen/M_z_q_9" BEL "myrandomizer/pn_gen/M_z_q_7" BEL
+        "myrandomizer/pn_gen/M_z_q_4" BEL "myrandomizer/pn_gen/M_z_q_3" BEL
+        "myrandomizer/pn_gen/M_z_q_0" BEL "myrandomizer/pn_gen/M_w_q_30" BEL
+        "myrandomizer/pn_gen/M_w_q_29" BEL "myrandomizer/pn_gen/M_w_q_28" BEL
+        "myrandomizer/pn_gen/M_w_q_27" BEL "myrandomizer/pn_gen/M_w_q_25" BEL
+        "myrandomizer/pn_gen/M_w_q_24" BEL "myrandomizer/pn_gen/M_w_q_23" BEL
+        "myrandomizer/pn_gen/M_w_q_22" BEL "myrandomizer/pn_gen/M_w_q_19" BEL
+        "myrandomizer/pn_gen/M_w_q_18" BEL "myrandomizer/pn_gen/M_w_q_16" BEL
+        "myrandomizer/pn_gen/M_w_q_15" BEL "myrandomizer/pn_gen/M_w_q_14" BEL
+        "myrandomizer/pn_gen/M_w_q_11" BEL "myrandomizer/pn_gen/M_w_q_10" BEL
+        "myrandomizer/pn_gen/M_w_q_7" BEL "myrandomizer/pn_gen/M_w_q_5" BEL
+        "myrandomizer/pn_gen/M_w_q_3" BEL "myrandomizer/pn_gen/M_w_q_2" BEL
+        "myrandomizer/pn_gen/M_w_q_0" BEL "myrandomizer/pn_gen/M_x_q_31" BEL
+        "myrandomizer/pn_gen/M_x_q_28" BEL "myrandomizer/pn_gen/M_x_q_27" BEL
+        "myrandomizer/pn_gen/M_x_q_26" BEL "myrandomizer/pn_gen/M_x_q_24" BEL
+        "myrandomizer/pn_gen/M_x_q_23" BEL "myrandomizer/pn_gen/M_x_q_21" BEL
+        "myrandomizer/pn_gen/M_x_q_18" BEL "myrandomizer/pn_gen/M_x_q_17" BEL
+        "myrandomizer/pn_gen/M_x_q_15" BEL "myrandomizer/pn_gen/M_x_q_14" BEL
+        "myrandomizer/pn_gen/M_x_q_12" BEL "myrandomizer/pn_gen/M_x_q_9" BEL
+        "myrandomizer/pn_gen/M_x_q_8" BEL "myrandomizer/pn_gen/M_x_q_7" BEL
+        "myrandomizer/pn_gen/M_x_q_4" BEL "myrandomizer/pn_gen/M_x_q_3" BEL
+        "myrandomizer/pn_gen/M_x_q_2" BEL "myrandomizer/pn_gen/M_x_q_0" BEL
+        "myrandomizer/pn_gen/M_y_q_30" BEL "myrandomizer/pn_gen/M_y_q_25" BEL
+        "myrandomizer/pn_gen/M_y_q_21" BEL "myrandomizer/pn_gen/M_y_q_20" BEL
+        "myrandomizer/pn_gen/M_y_q_19" BEL "myrandomizer/pn_gen/M_y_q_17" BEL
+        "myrandomizer/pn_gen/M_y_q_16" BEL "myrandomizer/pn_gen/M_y_q_14" BEL
+        "myrandomizer/pn_gen/M_y_q_13" BEL "myrandomizer/pn_gen/M_y_q_9" BEL
+        "myrandomizer/pn_gen/M_y_q_5" BEL "myrandomizer/pn_gen/M_y_q_2" BEL
+        "myrandomizer/pn_gen/M_y_q_0" BEL "myrandomizer/pn_gen/M_z_q_29" BEL
+        "myrandomizer/pn_gen/M_z_q_28" BEL "myrandomizer/pn_gen/M_z_q_27" BEL
+        "myrandomizer/pn_gen/M_z_q_25" BEL "myrandomizer/pn_gen/M_z_q_22" BEL
+        "myrandomizer/pn_gen/M_z_q_21" BEL "myrandomizer/pn_gen/M_z_q_16" BEL
+        "myrandomizer/pn_gen/M_z_q_13" BEL "myrandomizer/pn_gen/M_z_q_12" BEL
+        "myrandomizer/pn_gen/M_z_q_11" BEL "myrandomizer/pn_gen/M_z_q_8" BEL
+        "myrandomizer/pn_gen/M_z_q_6" BEL "myrandomizer/pn_gen/M_z_q_5" BEL
+        "myrandomizer/pn_gen/M_z_q_2" BEL "myrandomizer/pn_gen/M_z_q_1" BEL
+        "myrandomizer/pn_gen/M_w_q_31" BEL "myrandomizer/pn_gen/M_w_q_26" BEL
+        "myrandomizer/pn_gen/M_w_q_21" BEL "myrandomizer/pn_gen/M_w_q_20" BEL
+        "myrandomizer/pn_gen/M_w_q_17" BEL "myrandomizer/pn_gen/M_w_q_13" BEL
+        "myrandomizer/pn_gen/M_w_q_12" BEL "myrandomizer/pn_gen/M_w_q_9" BEL
+        "myrandomizer/pn_gen/M_w_q_8" BEL "myrandomizer/pn_gen/M_w_q_6" BEL
+        "myrandomizer/pn_gen/M_w_q_4" BEL "myrandomizer/pn_gen/M_w_q_1" BEL
+        "myrandomizer/pn_gen/M_x_q_30" BEL "myrandomizer/pn_gen/M_x_q_29" BEL
+        "myrandomizer/pn_gen/M_x_q_25" BEL "myrandomizer/pn_gen/M_x_q_22" BEL
+        "myrandomizer/pn_gen/M_x_q_20" BEL "myrandomizer/pn_gen/M_x_q_19" BEL
+        "myrandomizer/pn_gen/M_x_q_16" BEL "myrandomizer/pn_gen/M_x_q_13" BEL
+        "myrandomizer/pn_gen/M_x_q_11" BEL "myrandomizer/pn_gen/M_x_q_10" BEL
+        "myrandomizer/pn_gen/M_x_q_6" BEL "myrandomizer/pn_gen/M_x_q_5" BEL
+        "myrandomizer/pn_gen/M_x_q_1" BEL "clk_BUFGP/BUFG";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

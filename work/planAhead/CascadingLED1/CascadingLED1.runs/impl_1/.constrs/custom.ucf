@@ -1,9 +1,5 @@
-NET "button" LOC = P58;
-NET "button" IOSTANDARD = LVTTL;
-NET "button" PULLUP;
-NET "button2" LOC = P67;
-NET "button2" IOSTANDARD = LVTTL;
-NET "button2" PULLUP;
+NET "button" LOC = P58 | IOSTANDARD = LVTTL | PULLUP;
+NET "button2" LOC = P67 | IOSTANDARD = LVTTL | PULLUP;
 NET "high3" LOC = P138;
 NET "high3" IOSTANDARD = LVTTL;
 NET "high2" LOC = P140;
