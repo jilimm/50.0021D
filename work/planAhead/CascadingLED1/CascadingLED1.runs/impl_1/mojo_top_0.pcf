@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Nov 19 18:38:22 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
+COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
+COMP "high1" LOCATE = SITE "P142" LEVEL 1;
+COMP "high2" LOCATE = SITE "P140" LEVEL 1;
+COMP "button" LOCATE = SITE "P58" LEVEL 1;
+COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
+COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
+COMP "low1" LOCATE = SITE "P22" LEVEL 1;
+COMP "low2" LOCATE = SITE "P24" LEVEL 1;
+COMP "button2" LOCATE = SITE "P67" LEVEL 1;
+COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
+SCHEMATIC END;
+
