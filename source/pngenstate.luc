@@ -1,0 +1,14 @@
+module pngenstate (
+    input clk,  // clock
+    input rst,  // reset
+    output randint
+  ) {
+  
+  .clk{
+  .rst(rst){
+    
+
+  always {
+    out = 0;
+  }
+}

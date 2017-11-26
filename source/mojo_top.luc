@@ -42,18 +42,24 @@ module mojo_top (
   
   .clk(clk) {
     .rst(rst){
+    //fsm state = {WRONG, NEW, CONTINUE};
     //div is 26 (so its slow enough for you to see)
     //testing cricuit is only 3 rows (
-      counter ctr(#DIV(26),#SIZE(2));
+      counter ctr(#DIV(20),#SIZE(2));
     //ctr value corresponds to a (row chosen)
     }
+    //pn_gen pn_gen;
   }
    
   always{
   high1=0;
   high2=0;
   high3=0;
-  
+    //only generate a new number if 
+    //pn_gen.seed=seed.q;
+    //pn_gen.
+    //pn_gen.rst=rst; 
+    
     rand = 2b10;
     case (ctr.value){
       RowNumb.ROW1:
@@ -70,7 +76,7 @@ module mojo_top (
       RowNumb.ROW3:
         high1=0;
         high2=0;
-        high3=0;
+        high3=1;
         
     }
     
