@@ -1,0 +1,18 @@
+module blinker (
+    input clk,    // clock
+    input rst,    // reset
+    input button2,
+    output blink[3]
+  ) {
+  
+  //the dff is connected to a counter
+  //counter has     
+  dff counter[1](.clk(clk), .rst(rst));
+  
+
+  always {
+    blink = counter.q;
+    counter.d = counter.q;
+  }
+}
+

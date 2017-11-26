@@ -1,12 +1,11 @@
 CONFIG VCCAUX  = 3.3;
 
-NET "clk" TNM_NET = clk;
+NET "clk" TNM_NET = "clk";
 TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50 %;
 
 NET "clk" LOC = P56;
 NET "clk" IOSTANDARD = LVTTL;
-NET "rst_n" LOC = P38;
-NET "rst_n" IOSTANDARD = LVTTL;
+NET "rst_n" LOC = P38 | IOSTANDARD = LVTTL;
 
 NET "cclk" LOC = P70;
 NET "cclk" IOSTANDARD = LVTTL;

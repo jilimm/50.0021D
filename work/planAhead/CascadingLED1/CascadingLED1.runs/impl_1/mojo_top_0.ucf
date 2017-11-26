@@ -14,6 +14,8 @@ NET "button" PULLUP;
 NET "button2" LOC = P67;
 NET "button2" IOSTANDARD = LVTTL;
 NET "button2" PULLUP;
+NET "high3" LOC = P138;
+NET "high3" IOSTANDARD = LVTTL;
 NET "high2" LOC = P140;
 NET "high2" IOSTANDARD = LVTTL;
 NET "high1" LOC = P142;
@@ -30,11 +32,11 @@ NET "low1" IOSTANDARD = LVTTL;
 
 CONFIG VCCAUX  = 3.3;
 
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50 %;
 
 NET "clk" LOC = P56;
 NET "clk" IOSTANDARD = LVTTL;
-NET "rst_n" LOC = P38;
-NET "rst_n" IOSTANDARD = LVTTL;
 
 NET "cclk" LOC = P70;
 NET "cclk" IOSTANDARD = LVTTL;

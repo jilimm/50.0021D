@@ -1,9 +1,17 @@
+global RowNumb{
+  const ROW1 = 2b00;
+  const ROW2= 2b01;
+  const ROW3=2b11;
+}
+
+
 module mojo_top (
 //pressing buttons will make the LED lights light up
     input clk,              // 50MHz clock
-    input rst_n,            // reset button (active low)
+    input rst,            // reset button (active low)
     output high2,
     output high1,
+    output high3,
     output low1,
     output low2,
     input cclk,             // configuration clock, AVR ready when high
@@ -19,25 +27,59 @@ module mojo_top (
     input button2
   ) {
   
-  sig rst;                  // reset signal
+  //LED[ctr][b]
+  //ctr==number of rows
+  //ctr==> row to be active 
+  //if active connect high to be high1
+  //b controls the LEDs in the row to be lighted 
+  //b will correspond to the 
+  //b==the randomly generate number
 
+  //all the highs corresponding to the row will be 'activated'
+  //rand[2] is the configuration randomly generated
+  //it is controlled by the 'low' wires
+  sig rand[2];
   
   .clk(clk) {
-    // The reset conditioner is used to synchronize the reset signal to the FPGA
-    // clock. This ensures the entire FPGA comes out of reset at the same time.
-    reset_conditioner reset_cond;
+    .rst(rst){
+    //div is 26 (so its slow enough for you to see)
+    //testing cricuit is only 3 rows (
+      counter ctr(#DIV(26),#SIZE(2));
+    //ctr value corresponds to a (row chosen)
+    }
   }
+   
+  always{
+  high1=0;
+  high2=0;
+  high3=0;
   
-  always {
-    reset_cond.in = ~rst_n; // input raw inverted reset signal
-    rst = reset_cond.out;   // conditioned reset
+    rand = 2b10;
+    case (ctr.value){
+      RowNumb.ROW1:
+      //row 1 is active, the rest are not active;
+        high1=1;
+        high2=0;
+        high3=0;
+        
+      RowNumb.ROW2:
+        high1=0;
+        high2=1;
+        high3=0;
+        
+      RowNumb.ROW3:
+        high1=0;
+        high2=0;
+        high3=0;
+        
+    }
     
-//make the low always 0 then ground the high
-    //turning off LEDs doesnt reall work. 
-    high1 = ~button2; //142
-    low1= button2; //22
-    high2 = ~button;  //140
-    low2 = button;  //24
+    //if we want to activate "low"s we do it by making it low
+    //so put inverter
+    low1=~rand[0];
+    low2=~rand[1];
+        
+
     spi_miso = bz;          // not using SPI
     spi_channel = bzzzz;    // not using flags
     avr_rx = bz;            // not using serial port

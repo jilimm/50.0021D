@@ -6,9 +6,10 @@
 
 module mojo_top_0 (
     input clk,
-    input rst_n,
+    input rst,
     output reg high2,
     output reg high1,
+    output reg high3,
     output reg low1,
     output reg low2,
     input cclk,
@@ -26,23 +27,40 @@ module mojo_top_0 (
   
   
   
-  reg rst;
+  reg [1:0] rand;
   
-  wire [1-1:0] M_reset_cond_out;
-  reg [1-1:0] M_reset_cond_in;
-  reset_conditioner_1 reset_cond (
+  wire [2-1:0] M_ctr_value;
+  counter_1 ctr (
     .clk(clk),
-    .in(M_reset_cond_in),
-    .out(M_reset_cond_out)
+    .rst(rst),
+    .value(M_ctr_value)
   );
   
   always @* begin
-    M_reset_cond_in = ~rst_n;
-    rst = M_reset_cond_out;
-    high1 = ~button2;
-    low1 = button2;
-    high2 = ~button;
-    low2 = button;
+    high1 = 1'h0;
+    high2 = 1'h0;
+    high3 = 1'h0;
+    rand = 2'h2;
+    
+    case (M_ctr_value)
+      2'h0: begin
+        high1 = 1'h1;
+        high2 = 1'h0;
+        high3 = 1'h0;
+      end
+      2'h1: begin
+        high1 = 1'h0;
+        high2 = 1'h1;
+        high3 = 1'h0;
+      end
+      2'h3: begin
+        high1 = 1'h0;
+        high2 = 1'h0;
+        high3 = 1'h0;
+      end
+    endcase
+    low1 = ~rand[0+0-:1];
+    low2 = ~rand[1+0-:1];
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
