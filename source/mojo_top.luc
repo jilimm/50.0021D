@@ -3,11 +3,11 @@ module mojo_top (
 //pressing buttons will make the LED lights light up
     input clk,              // 50MHz clock
     input rst,            // reset button (active low)
-    output high2,
-    output high1,
-    output high3,
-    output low1,
-    output low2,
+    //output high2,
+    //output high1,
+    //output high3,
+    //output low1,
+    //output low2,
     output io_led[3][8], //LEDs on io shield
     input cclk,             // configuration clock, AVR ready when high
     output spi_miso,        // AVR SPI MISO
@@ -24,30 +24,44 @@ module mojo_top (
 
   .clk(clk) {
     .rst(rst){
-      randomize myrandomizer;
-      propogate mypropogater;
+     // randomize myrandomizer;
+      //propogate mypropogater;
     }
      
   }
+  
+  //sig testnum[2];
    
   always{
+   //testnum=2b10;
+    
+    io_led=3x{{8h00}};
+    io_led[0][0]=1;
+    /*
   //connect randomized output to the proogate place
-    mypropogater.num=myrandomizer.num;
+     //mypropogater.num=myrandomizer.num;
+    //connect the row being lit to the randomizer
+    //myrandomizer.rowNum = mypropogater.rowLit;
+     
     
     //show the number generated
+    io_led[0][7:2]=6b0;  
     io_led[0][0] = myrandomizer.num[0];
-    io_led[0][1] = myrandomizer.num[1];
+    io_led[1][0] = myrandomizer.num[1];
+    
+    io_led[1]=8b0;
+    io_led[2]=8b0;
     
     //so my randomizer knows which row is currently being lit
-    myrandomizer.rowNum=mypropogater.rowLit;
     
     //connect the stuff to the lights
+   
     high1=mypropogater.row1;
     high2=mypropogater.row2;
     high3=mypropogater.row3;
-    low1=mypropogater.row1;
-    low2=mypropogater.row2;
-    
+    low1=mypropogater.numOut[1];
+    low2=mypropogater.numOut[0];
+    */
   
     spi_miso = bz;          // not using SPI
     spi_channel = bzzzz;    // not using flags

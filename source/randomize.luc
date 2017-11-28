@@ -17,7 +17,7 @@ module randomize (
   always {
     pn_gen.rst=rst;
     pn_gen.seed=32b0;
-    pn_gen.next=0; //dont generate a new number by default
+    pn_gen.next=1; //dont generate a new number by default
     num_gen=pn_gen.num[31:30];
     num=00;
     

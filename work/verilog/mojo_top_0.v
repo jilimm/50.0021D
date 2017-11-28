@@ -7,11 +7,6 @@
 module mojo_top_0 (
     input clk,
     input rst,
-    output reg high2,
-    output reg high1,
-    output reg high3,
-    output reg low1,
-    output reg low2,
     output reg [23:0] io_led,
     input cclk,
     output reg spi_miso,
@@ -26,41 +21,10 @@ module mojo_top_0 (
   
   
   
-  wire [2-1:0] M_myrandomizer_num;
-  reg [2-1:0] M_myrandomizer_rowNum;
-  randomize_1 myrandomizer (
-    .clk(clk),
-    .rst(rst),
-    .rowNum(M_myrandomizer_rowNum),
-    .num(M_myrandomizer_num)
-  );
-  wire [2-1:0] M_mypropogater_rowLit;
-  wire [2-1:0] M_mypropogater_numOut;
-  wire [1-1:0] M_mypropogater_row1;
-  wire [1-1:0] M_mypropogater_row2;
-  wire [1-1:0] M_mypropogater_row3;
-  reg [2-1:0] M_mypropogater_num;
-  propogate_2 mypropogater (
-    .clk(clk),
-    .rst(rst),
-    .num(M_mypropogater_num),
-    .rowLit(M_mypropogater_rowLit),
-    .numOut(M_mypropogater_numOut),
-    .row1(M_mypropogater_row1),
-    .row2(M_mypropogater_row2),
-    .row3(M_mypropogater_row3)
-  );
   
   always @* begin
-    M_mypropogater_num = M_myrandomizer_num;
-    io_led[0+0+0-:1] = M_myrandomizer_num[0+0-:1];
-    io_led[0+1+0-:1] = M_myrandomizer_num[1+0-:1];
-    M_myrandomizer_rowNum = M_mypropogater_rowLit;
-    high1 = M_mypropogater_row1;
-    high2 = M_mypropogater_row2;
-    high3 = M_mypropogater_row3;
-    low1 = M_mypropogater_row1;
-    low2 = M_mypropogater_row2;
+    io_led = 24'h000000;
+    io_led[0+0+0-:1] = 1'h1;
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;

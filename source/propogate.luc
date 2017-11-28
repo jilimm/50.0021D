@@ -1,7 +1,7 @@
 global RowNumb{
   const ROW1 = 2b00;
   const ROW2= 2b01;
-  const ROW3=2b11;
+  const ROW3= 2b11;
 }
 
 
@@ -18,7 +18,7 @@ module propogate (
 
  .clk(clk) {
     .rst(rst){
-      counter ctr(#DIV(30),#SIZE(2));
+      counter ctr(#DIV(24),#SIZE(2));
     }
   }
    
