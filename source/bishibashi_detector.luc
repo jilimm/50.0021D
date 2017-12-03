@@ -1,0 +1,44 @@
+module bishibashi_detector #(
+    CLK_FREQ = 50000000 : CLK_FREQ > 0, // clock frequency
+    MIN_DELAY = 200 : MIN_DELAY > 0,     // minimum delay in ms
+    NUM_SYNC = 2 : NUM_SYNC > 1         // number of sync flip flops
+  )(
+    input clk,  // clock
+    input bish, // left button
+    input bash, // right button
+    input shi,  // center button
+    output out
+  ) {
+ .clk(clk) {
+    edge_detector edge_detector_bish(#RISE(1), #FALL(0)); // detect rising edges
+    button_conditioner button_cond_bish;     // button input conditioner
+    edge_detector edge_detector_bash(#RISE(1), #FALL(0)); // detect rising edges
+    button_conditioner button_cond_bash;     // button input reset_conditioner
+    edge_detector edge_detector_shi(#RISE(1), #FALL(0)); // detect rising edges
+    button_conditioner button_cond_shi;     // button input conditioner 
+    
+    pipeline sync_bish(#DEPTH(NUM_SYNC)); // synchronizing chain
+    pipeline sync_bash(#DEPTH(NUM_SYNC)); // synchronizing chain
+    pipeline sync_shi(#DEPTH(NUM_SYNC)); // synchronizing chain 
+    // CLK_FREQ * MIN_DELAY / 1000 = clock cycles for MIN_DELAY milliseconds
+    dff ctr[$clog2(CLK_FREQ * MIN_DELAY / 1000)];
+  }
+  always {
+    sync_bish.in = bish;
+    sync_bash.in = bash;
+    sync_shi.in = shi;
+    button_cond_bish.in = bish;            // raw button input
+    edge_detector_bish.in = button_cond_bish.out; // input to the edge_detector
+    button_cond_bash.in = bash;            // raw button input
+    edge_detector_bash.in = button_cond_bash.out; // input to the edge_detector
+    button_cond_shi.in = shi;            // raw button input
+    edge_detector_shi.in = button_cond_shi.out; // input to the edge_detector
+    out = 0;
+    if(!&ctr.q){
+      ctr.d = ctr.q +1 ;
+      out = edge_detector_bish.out*4 + edge_detector_shi.out*2 + edge_detector_bash.out;
+  }
+    if (!sync_bash.out & !sync_bish.out & !sync_shi.out)
+      ctr.d = 0;
+  }
+}

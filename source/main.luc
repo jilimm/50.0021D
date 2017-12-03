@@ -1,0 +1,28 @@
+module main (
+    input clk,  // clock
+    input rst,  // reset
+    input bish, // left button
+    input bash, // right button
+    input shi,  // center button
+    output out
+  ) {
+  
+  .clk(clk) {
+    bishibashi_detector bibashi;
+    .rst(rst){
+    
+     }
+  }
+  always {
+    out = 0;
+    bibashi.bish = bish;
+    bibashi.bash = bash;
+    bibashi.shi = shi;
+    if(bibashi.out != 0){
+    out = bibashi.out;
+    //check if clk counter 9<x<11
+      // if inside, check if bibashi.out same value, out = points 
+      // if outside, out = halt value
+  }
+}
+}
