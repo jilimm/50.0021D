@@ -1,0 +1,58 @@
+global RowNumb{
+  const ROW1 = 2b00;
+  const ROW2= 2b01;
+  const ROW3= 2b11;
+}
+
+
+module propogate (
+    input clk,  // clock
+    input rst,  // reset
+    input num[2], //LEDs to light up on each row
+    output rowLit[2], //the row to be lit up (ctr.value)
+    output numOut[2], //LEDs that should be lit up on the active row
+    output row1,
+    output row2,
+    output row3 //which row should be active
+  ) {
+
+ .clk(clk) {
+    .rst(rst){
+      counter ctr(#DIV(24),#SIZE(2));
+    }
+  }
+   
+  always{
+  //instantiate values 
+  numOut=2b00;
+  row1=0;
+  row2=0;
+  row3=0;
+    numOut[0] = ~num[0];
+    numOut[1] = ~num[1];
+    rowLit = ctr.value;
+    
+    case (ctr.value){
+      RowNumb.ROW1:
+          row1=1;
+          row2=0;
+          row3=0;
+   
+      RowNumb.ROW2:
+      //light up row 2 with specified numbers
+        row1=0;
+        row2=1;
+        row3=0;
+        
+      RowNumb.ROW3:
+      //light up row 3 with active numbers
+        row1=0;
+        row2=0;
+        row3=1;
+        
+    }
+    
+    
+  }
+}
+   

@@ -4,10 +4,11 @@
     <src>pngenstate.luc</src>
     <src>main.luc</src>
     <src>bishibashi_detector.luc</src>
+    <src>randomize.luc</src>
     <src top="true">mojo_top.luc</src>
-    <src>blinker.luc</src>
-    <ucf lib="true">mojo.ucf</ucf>
+    <src>propogate.luc</src>
     <ucf>custom.ucf</ucf>
+    <ucf lib="true">mojo.ucf</ucf>
     <component>decoder.luc</component>
     <component>pn_gen.luc</component>
     <component>reset_conditioner.luc</component>

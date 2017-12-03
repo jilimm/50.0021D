@@ -1,0 +1,42 @@
+module randomize (
+    input clk,  // clock
+    input rst,  // reset
+    input rowNum[2], //ctr value
+    output num[2]  //random number outputt-ed
+  ) {
+  
+  //interal check is the number generated 2b00?
+  sig num_gen[2];
+  
+  .clk(clk) {
+    .rst(rst){
+     }
+     pn_gen pn_gen;
+  }
+
+  always {
+    pn_gen.rst=rst;
+    pn_gen.seed=32b0;
+    pn_gen.next=1; //dont generate a new number by default
+    num_gen=pn_gen.num[31:30];
+    num=00;
+    
+    if (!rowNum==2b11){
+      pn_gen.next=0;
+    }
+      //at the last row I need a new number
+    else{
+      pn_gen.next=1;
+      //check if the new number generated is 2b00
+      if (num_gen==2b00){
+        pn_gen.next=1;
+        num_gen=pn_gen.num[31:30];
+      }
+        //number generated is not 00
+      else{
+        num=num_gen;      
+        }
+        
+  }
+}
+}

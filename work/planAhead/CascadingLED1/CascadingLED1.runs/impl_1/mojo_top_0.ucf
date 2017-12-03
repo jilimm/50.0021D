@@ -8,22 +8,6 @@
 # Constraints from file : 'custom.ucf'
 ####################################################################################
 
-NET "button" LOC = P58;
-NET "button" IOSTANDARD = LVTTL;
-NET "button" PULLUP;
-NET "button2" LOC = P67;
-NET "button2" IOSTANDARD = LVTTL;
-NET "button2" PULLUP;
-NET "high3" LOC = P138;
-NET "high3" IOSTANDARD = LVTTL;
-NET "high2" LOC = P140;
-NET "high2" IOSTANDARD = LVTTL;
-NET "high1" LOC = P142;
-NET "high1" IOSTANDARD = LVTTL;
-NET "low2" LOC = P24;
-NET "low2" IOSTANDARD = LVTTL;
-NET "low1" LOC = P22;
-NET "low1" IOSTANDARD = LVTTL;
 
 
 ####################################################################################
@@ -32,8 +16,6 @@ NET "low1" IOSTANDARD = LVTTL;
 
 CONFIG VCCAUX  = 3.3;
 
-NET "clk" TNM_NET = "clk";
-TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50 %;
 
 NET "clk" LOC = P56;
 NET "clk" IOSTANDARD = LVTTL;
