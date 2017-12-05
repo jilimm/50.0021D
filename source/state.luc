@@ -1,0 +1,74 @@
+module state (
+    input clk,  // clock
+    input rst,  // reset
+    
+    input bishi[3], //bishibashi buttons*3
+
+    output //led matrix
+    output //score
+
+  ) {
+
+  .clk(clk) {
+    .rst(rst) {
+
+    fsm state(#INIT(HALT)) = {MAIN,SUMUP,HALT}; // MAIN = random + propagate + compare the button and the result, sumup = add to score, halt = pause game
+    multi_seven_seg seg;
+    }
+    
+  }
+  alu myalu;
+  bintoAscii translater;
+  sig score[8];
+  sig out[8];
+  sig result;
+  sig highscore[8];
+  sig z;
+  sig v;
+  sig n;
+  always {
+    score = 0;
+    result = 8d0;
+    case (state.q){
+      state.MAIN:
+
+        mainout = //store the result of MAIN
+        if (mainout==0) {state.d=state.HALT;}
+        else{state.d=state.SUMUP;}
+      state.SUMUP:
+        myalu.alufn = 6b000000;        
+        myalu.a= score;
+        myalu.b= mainout;
+
+        out = myalu.alu;
+        z=myalu.z;
+        v=myalu.v;
+        n=myalu.n;
+        result = out[0]+out[1]*2+out[2]*4+out[3]*8+out[4]*16+out[5]*32+out[6]*64+out[7]*128;
+        seg.values[3]=11;
+        translater.num = result;
+        seg.values[2]=translater.ascii[2];
+        seg.values[1]=translater.ascii[1];
+        seg.values[0]=translater.ascii[0];
+        score = out;
+        state.d = state.MAIN;
+
+      state.HALT:
+        myalu.alufn =6b110111;
+        myalu.a = score;
+        myalu.b = highscore;
+        out = myalu.alu;
+        z=myalu.z;
+        v=myalu.v;
+        n=myalu.n;
+        if (out != 8b1){ highscore = score;}
+        result = highscore[0]+highscore[1]*2+highscore[2]*4+highscore[3]*8+highscore[4]*16+highscore[5]*32+highscore[6]*64+highscore[7]*128;
+        seg.values[3]=10;
+        translater.num = result;
+        seg.values[2]=translater.ascii[2];
+        seg.values[1]=translater.ascii[1];
+        seg.values[0]=translater.ascii[0];
+        if (bishi[0]|bishi[1]|bishi[2]) { state.d = state.MAIN;}
+
+  }
+}
