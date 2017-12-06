@@ -1,0 +1,26 @@
+module random (
+    input clk,  // clock
+    input rst,  // reset
+    input seed[3],
+    output out[3]
+  ) {
+  
+ .clk(clk){
+  .rst(rst){
+    dff count[3];
+    }
+  }
+  
+  sig outtemp[3];
+  sig outtemp1[3];
+  //sig outttemp1[3];
+
+  always{ 
+    count.d = seed;  
+    outtemp=seed^(seed<<2);
+    outtemp1 = outtemp^(outtemp >>1);
+    outtemp1 = count.q;
+    
+    out = count.q;
+  }
+}

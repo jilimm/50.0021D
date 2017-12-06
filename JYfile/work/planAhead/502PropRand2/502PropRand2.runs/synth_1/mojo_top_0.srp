@@ -1,0 +1,1039 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: mojo_top_0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top_0.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx9tqg144-2
+Output File Name                   : "mojo_top_0.ngc"
+
+---- Source Options
+Top Module Name                    : mojo_top_0
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_8.v" into library work
+Parsing module <counter_8>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_7.v" into library work
+Parsing module <counter_7>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_6.v" into library work
+Parsing module <counter_6>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_5.v" into library work
+Parsing module <counter_5>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_4.v" into library work
+Parsing module <counter_4>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_12.v" into library work
+Parsing module <counter_12>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
+Parsing module <reset_conditioner_1>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/register_2.v" into library work
+Parsing module <register_2>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/register1_3.v" into library work
+Parsing module <register1_3>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/propogate_9.v" into library work
+Parsing module <propogate_9>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/pn_gen_10.v" into library work
+Parsing module <pn_gen_10>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Parsing module <mojo_top_0>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top_0>.
+
+Elaborating module <reset_conditioner_1>.
+
+Elaborating module <register_2>.
+
+Elaborating module <register1_3>.
+
+Elaborating module <counter_4>.
+
+Elaborating module <counter_5>.
+
+Elaborating module <counter_6>.
+
+Elaborating module <counter_7>.
+
+Elaborating module <counter_8>.
+
+Elaborating module <propogate_9>.
+
+Elaborating module <counter_12>.
+
+Elaborating module <pn_gen_10>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top_0>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/mojo_top_0.v".
+WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <M_seed_q>.
+    Found 32-bit register for signal <M_seed1_q>.
+    Found 3-bit register for signal <M_ctr_q>.
+    Found 3-bit adder for signal <M_ctr_d> created at line 149.
+    Found 32-bit adder for signal <M_seed1_q[31]_GND_1_o_add_2_OUT> created at line 165.
+    Found 32-bit adder for signal <M_seed_q[31]_GND_1_o_add_3_OUT> created at line 166.
+    Found 8x1-bit Read Only RAM for signal <M_clkreg_out[2]_GND_20_o_Mux_22_o>
+    Found 1-bit 5-to-1 multiplexer for signal <M_clkreg_out[2]_chosenClk_Mux_21_o> created at line 180.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 136
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 136
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 136
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 136
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 136
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 136
+WARNING:Xst:737 - Found 1-bit latch for signal <chosenClk>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   6 Multiplexer(s).
+	inferred   6 Tristate(s).
+Unit <mojo_top_0> synthesized.
+
+Synthesizing Unit <reset_conditioner_1>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
+    Found 4-bit register for signal <M_stage_q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <reset_conditioner_1> synthesized.
+
+Synthesizing Unit <register_2>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/register_2.v".
+    Found 3-bit register for signal <M_regs_q>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <register_2> synthesized.
+
+Synthesizing Unit <register1_3>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/register1_3.v".
+    Found 3-bit register for signal <M_regs_q>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <register1_3> synthesized.
+
+Synthesizing Unit <counter_4>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_4.v".
+    Found 22-bit register for signal <M_ctr_q>.
+    Found 22-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+Unit <counter_4> synthesized.
+
+Synthesizing Unit <counter_5>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_5.v".
+    Found 23-bit register for signal <M_ctr_q>.
+    Found 23-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+Unit <counter_5> synthesized.
+
+Synthesizing Unit <counter_6>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_6.v".
+    Found 24-bit register for signal <M_ctr_q>.
+    Found 24-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+Unit <counter_6> synthesized.
+
+Synthesizing Unit <counter_7>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_7.v".
+    Found 25-bit register for signal <M_ctr_q>.
+    Found 25-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+Unit <counter_7> synthesized.
+
+Synthesizing Unit <counter_8>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_8.v".
+    Found 26-bit register for signal <M_ctr_q>.
+    Found 26-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+Unit <counter_8> synthesized.
+
+Synthesizing Unit <propogate_9>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/propogate_9.v".
+    Found 4x3-bit Read Only RAM for signal <_n0024>
+    Found 1-bit 5-to-1 multiplexer for signal <clkinput[2]_clkinvalue_Mux_4_o> created at line 63.
+WARNING:Xst:737 - Found 1-bit latch for signal <clkinvalue>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Latch(s).
+	inferred   1 Multiplexer(s).
+Unit <propogate_9> synthesized.
+
+Synthesizing Unit <counter_12>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/counter_12.v".
+    Found 2-bit register for signal <M_ctr_q>.
+    Found 2-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <counter_12> synthesized.
+
+Synthesizing Unit <pn_gen_10>.
+    Related source file is "C:/Users/Jing Yun/Documents/mojo/502PropRand2/work/planAhead/502PropRand2/502PropRand2.srcs/sources_1/imports/verilog/pn_gen_10.v".
+    Found 32-bit register for signal <M_y_q>.
+    Found 32-bit register for signal <M_z_q>.
+    Found 32-bit register for signal <M_w_q>.
+    Found 32-bit register for signal <M_x_q>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <pn_gen_10> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x3-bit single-port Read Only RAM                     : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 14
+ 2-bit adder                                           : 1
+ 22-bit adder                                          : 2
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 2
+ 25-bit adder                                          : 2
+ 26-bit adder                                          : 2
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 2
+# Registers                                            : 25
+ 2-bit register                                        : 1
+ 22-bit register                                       : 2
+ 23-bit register                                       : 2
+ 24-bit register                                       : 2
+ 25-bit register                                       : 2
+ 26-bit register                                       : 2
+ 3-bit register                                        : 3
+ 32-bit register                                       : 10
+ 4-bit register                                        : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 5-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 2
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 6
+# Xors                                                 : 6
+ 32-bit xor2                                           : 4
+ 32-bit xor4                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <counter_12>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_12> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_4>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_4> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_5>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_5> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_6>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_6> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_7>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_7> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_8>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_8> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mojo_top_0>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+The following registers are absorbed into counter <M_seed_q>: 1 register on signal <M_seed_q>.
+The following registers are absorbed into counter <M_seed1_q>: 1 register on signal <M_seed1_q>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_M_clkreg_out[2]_GND_20_o_Mux_22_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <led>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <mojo_top_0> synthesized (advanced).
+
+Synthesizing (advanced) Unit <propogate_9>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0024> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <M_ctr_value>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <propogate_9> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x3-bit single-port distributed Read Only RAM         : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 14
+ 2-bit up counter                                      : 1
+ 22-bit up counter                                     : 2
+ 23-bit up counter                                     : 2
+ 24-bit up counter                                     : 2
+ 25-bit up counter                                     : 2
+ 26-bit up counter                                     : 2
+ 3-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 266
+ Flip-Flops                                            : 266
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 5-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 2
+# Xors                                                 : 6
+ 32-bit xor2                                           : 4
+ 32-bit xor4                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <M_seed1_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_10> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_14> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_15> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_18> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_19> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_20> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_21> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_23> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_24> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_29> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed1_q_31> of sequential type is unconnected in block <mojo_top_0>.
+
+Optimizing unit <mojo_top_0> ...
+
+Optimizing unit <propogate_9> ...
+
+Optimizing unit <pn_gen_10> ...
+WARNING:Xst:1293 - FF/Latch <pn_gen/M_y_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_z_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_16> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_25> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_w_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_y_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_z_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_y_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pn_gen/M_x_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_gen/M_x_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_y_q_30> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_x_q_30> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_22> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_x_q_22> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_y_q_19> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_x_q_19> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_11> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_x_q_11> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_28> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_27> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_21> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_y_q_21> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_y_q_17> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_y_q_14> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_12> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_y_q_9> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_8> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_2> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_y_q_2> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_y_q_0> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_29> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_6> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <clk_gen/M_z_q_1> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_28> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_27> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_21> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_y_q_21> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_y_q_17> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_y_q_14> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_12> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_y_q_9> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_8> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_2> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_y_q_2> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_y_q_0> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_29> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_22> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_11> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_6> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pn_gen/M_z_q_1> is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_29> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_31> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_31> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_w_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_x_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_x_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_x_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_x_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_x_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_y_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_y_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_y_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_y_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_z_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_z_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_z_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_z_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_31> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_29> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_23> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_18> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_15> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_14> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_10> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_x_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_x_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_x_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_x_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_x_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_y_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_y_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_z_q_25> of sequential type is unconnected in block <mojo_top_0>.
+INFO:Xst:2261 - The FF/Latch <slowclk22/M_ctr_q_22> in Unit <mojo_top_0> is equivalent to the following 7 FFs/Latches, which will be removed : <slowclk23/M_ctr_q_22> <slowclk24/M_ctr_q_22> <slowclk25/M_ctr_q_22> <mypropogater/slowclk25/M_ctr_q_22> <mypropogater/slowclk24/M_ctr_q_22> <mypropogater/slowclk23/M_ctr_q_22> <mypropogater/slowclk22/M_ctr_q_22> 
+INFO:Xst:2261 - The FF/Latch <slowclk25/M_ctr_q_25> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypropogater/slowclk25/M_ctr_q_25> 
+INFO:Xst:2261 - The FF/Latch <slowclk23/M_ctr_q_23> in Unit <mojo_top_0> is equivalent to the following 5 FFs/Latches, which will be removed : <slowclk24/M_ctr_q_23> <slowclk25/M_ctr_q_23> <mypropogater/slowclk25/M_ctr_q_23> <mypropogater/slowclk24/M_ctr_q_23> <mypropogater/slowclk23/M_ctr_q_23> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_10> <slowclk23/M_ctr_q_10> <slowclk24/M_ctr_q_10> <slowclk25/M_ctr_q_10> <mypropogater/slowclk25/M_ctr_q_10> <mypropogater/slowclk24/M_ctr_q_10> <mypropogater/slowclk23/M_ctr_q_10> <mypropogater/slowclk22/M_ctr_q_10> <mypropogater/slowclk21/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_11> <slowclk23/M_ctr_q_11> <slowclk24/M_ctr_q_11> <slowclk25/M_ctr_q_11> <mypropogater/slowclk25/M_ctr_q_11> <mypropogater/slowclk24/M_ctr_q_11> <mypropogater/slowclk23/M_ctr_q_11> <mypropogater/slowclk22/M_ctr_q_11> <mypropogater/slowclk21/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_12> <slowclk23/M_ctr_q_12> <slowclk24/M_ctr_q_12> <slowclk25/M_ctr_q_12> <mypropogater/slowclk25/M_ctr_q_12> <mypropogater/slowclk24/M_ctr_q_12> <mypropogater/slowclk23/M_ctr_q_12> <mypropogater/slowclk22/M_ctr_q_12> <mypropogater/slowclk21/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_13> <slowclk23/M_ctr_q_13> <slowclk24/M_ctr_q_13> <slowclk25/M_ctr_q_13> <mypropogater/slowclk25/M_ctr_q_13> <mypropogater/slowclk24/M_ctr_q_13> <mypropogater/slowclk23/M_ctr_q_13> <mypropogater/slowclk22/M_ctr_q_13> <mypropogater/slowclk21/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_14> <slowclk23/M_ctr_q_14> <slowclk24/M_ctr_q_14> <slowclk25/M_ctr_q_14> <mypropogater/slowclk25/M_ctr_q_14> <mypropogater/slowclk24/M_ctr_q_14> <mypropogater/slowclk23/M_ctr_q_14> <mypropogater/slowclk22/M_ctr_q_14> <mypropogater/slowclk21/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_15> <slowclk23/M_ctr_q_15> <slowclk24/M_ctr_q_15> <slowclk25/M_ctr_q_15> <mypropogater/slowclk25/M_ctr_q_15> <mypropogater/slowclk24/M_ctr_q_15> <mypropogater/slowclk23/M_ctr_q_15> <mypropogater/slowclk22/M_ctr_q_15> <mypropogater/slowclk21/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_20> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_20> <slowclk23/M_ctr_q_20> <slowclk24/M_ctr_q_20> <slowclk25/M_ctr_q_20> <mypropogater/slowclk25/M_ctr_q_20> <mypropogater/slowclk24/M_ctr_q_20> <mypropogater/slowclk23/M_ctr_q_20> <mypropogater/slowclk22/M_ctr_q_20> <mypropogater/slowclk21/M_ctr_q_20> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_16> <slowclk23/M_ctr_q_16> <slowclk24/M_ctr_q_16> <slowclk25/M_ctr_q_16> <mypropogater/slowclk25/M_ctr_q_16> <mypropogater/slowclk24/M_ctr_q_16> <mypropogater/slowclk23/M_ctr_q_16> <mypropogater/slowclk22/M_ctr_q_16> <mypropogater/slowclk21/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_21> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_21> <slowclk23/M_ctr_q_21> <slowclk24/M_ctr_q_21> <slowclk25/M_ctr_q_21> <mypropogater/slowclk25/M_ctr_q_21> <mypropogater/slowclk24/M_ctr_q_21> <mypropogater/slowclk23/M_ctr_q_21> <mypropogater/slowclk22/M_ctr_q_21> <mypropogater/slowclk21/M_ctr_q_21> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_17> <slowclk23/M_ctr_q_17> <slowclk24/M_ctr_q_17> <slowclk25/M_ctr_q_17> <mypropogater/slowclk25/M_ctr_q_17> <mypropogater/slowclk24/M_ctr_q_17> <mypropogater/slowclk23/M_ctr_q_17> <mypropogater/slowclk22/M_ctr_q_17> <mypropogater/slowclk21/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_0> <slowclk23/M_ctr_q_0> <slowclk24/M_ctr_q_0> <slowclk25/M_ctr_q_0> <mypropogater/slowclk25/M_ctr_q_0> <mypropogater/slowclk24/M_ctr_q_0> <mypropogater/slowclk23/M_ctr_q_0> <mypropogater/slowclk22/M_ctr_q_0> <mypropogater/slowclk21/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_18> <slowclk23/M_ctr_q_18> <slowclk24/M_ctr_q_18> <slowclk25/M_ctr_q_18> <mypropogater/slowclk25/M_ctr_q_18> <mypropogater/slowclk24/M_ctr_q_18> <mypropogater/slowclk23/M_ctr_q_18> <mypropogater/slowclk22/M_ctr_q_18> <mypropogater/slowclk21/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_1> <slowclk23/M_ctr_q_1> <slowclk24/M_ctr_q_1> <slowclk25/M_ctr_q_1> <mypropogater/slowclk25/M_ctr_q_1> <mypropogater/slowclk24/M_ctr_q_1> <mypropogater/slowclk23/M_ctr_q_1> <mypropogater/slowclk22/M_ctr_q_1> <mypropogater/slowclk21/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_19> <slowclk23/M_ctr_q_19> <slowclk24/M_ctr_q_19> <slowclk25/M_ctr_q_19> <mypropogater/slowclk25/M_ctr_q_19> <mypropogater/slowclk24/M_ctr_q_19> <mypropogater/slowclk23/M_ctr_q_19> <mypropogater/slowclk22/M_ctr_q_19> <mypropogater/slowclk21/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_2> <slowclk23/M_ctr_q_2> <slowclk24/M_ctr_q_2> <slowclk25/M_ctr_q_2> <mypropogater/slowclk25/M_ctr_q_2> <mypropogater/slowclk24/M_ctr_q_2> <mypropogater/slowclk23/M_ctr_q_2> <mypropogater/slowclk22/M_ctr_q_2> <mypropogater/slowclk21/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_3> <slowclk23/M_ctr_q_3> <slowclk24/M_ctr_q_3> <slowclk25/M_ctr_q_3> <mypropogater/slowclk25/M_ctr_q_3> <mypropogater/slowclk24/M_ctr_q_3> <mypropogater/slowclk23/M_ctr_q_3> <mypropogater/slowclk22/M_ctr_q_3> <mypropogater/slowclk21/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_4> <slowclk23/M_ctr_q_4> <slowclk24/M_ctr_q_4> <slowclk25/M_ctr_q_4> <mypropogater/slowclk25/M_ctr_q_4> <mypropogater/slowclk24/M_ctr_q_4> <mypropogater/slowclk23/M_ctr_q_4> <mypropogater/slowclk22/M_ctr_q_4> <mypropogater/slowclk21/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_5> <slowclk23/M_ctr_q_5> <slowclk24/M_ctr_q_5> <slowclk25/M_ctr_q_5> <mypropogater/slowclk25/M_ctr_q_5> <mypropogater/slowclk24/M_ctr_q_5> <mypropogater/slowclk23/M_ctr_q_5> <mypropogater/slowclk22/M_ctr_q_5> <mypropogater/slowclk21/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_6> <slowclk23/M_ctr_q_6> <slowclk24/M_ctr_q_6> <slowclk25/M_ctr_q_6> <mypropogater/slowclk25/M_ctr_q_6> <mypropogater/slowclk24/M_ctr_q_6> <mypropogater/slowclk23/M_ctr_q_6> <mypropogater/slowclk22/M_ctr_q_6> <mypropogater/slowclk21/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_7> <slowclk23/M_ctr_q_7> <slowclk24/M_ctr_q_7> <slowclk25/M_ctr_q_7> <mypropogater/slowclk25/M_ctr_q_7> <mypropogater/slowclk24/M_ctr_q_7> <mypropogater/slowclk23/M_ctr_q_7> <mypropogater/slowclk22/M_ctr_q_7> <mypropogater/slowclk21/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_8> <slowclk23/M_ctr_q_8> <slowclk24/M_ctr_q_8> <slowclk25/M_ctr_q_8> <mypropogater/slowclk25/M_ctr_q_8> <mypropogater/slowclk24/M_ctr_q_8> <mypropogater/slowclk23/M_ctr_q_8> <mypropogater/slowclk22/M_ctr_q_8> <mypropogater/slowclk21/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <slowclk21/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <slowclk22/M_ctr_q_9> <slowclk23/M_ctr_q_9> <slowclk24/M_ctr_q_9> <slowclk25/M_ctr_q_9> <mypropogater/slowclk25/M_ctr_q_9> <mypropogater/slowclk24/M_ctr_q_9> <mypropogater/slowclk23/M_ctr_q_9> <mypropogater/slowclk22/M_ctr_q_9> <mypropogater/slowclk21/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <slowclk24/M_ctr_q_24> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <slowclk25/M_ctr_q_24> <mypropogater/slowclk25/M_ctr_q_24> <mypropogater/slowclk24/M_ctr_q_24> 
+INFO:Xst:2261 - The FF/Latch <clk_gen/M_x_q_29> in Unit <mojo_top_0> is equivalent to the following 8 FFs/Latches, which will be removed : <clk_gen/M_x_q_10> <clk_gen/M_x_q_1> <clk_gen/M_y_q_20> <pn_gen/M_x_q_29> <pn_gen/M_x_q_10> <pn_gen/M_x_q_1> <pn_gen/M_y_q_20> <pn_gen/M_y_q_19> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 4.
+WARNING:Xst:2677 - Node <M_seed_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_23> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_seed_q_24> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_24> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_w_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <clk_gen/M_x_q_20> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_x_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_x_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_y_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_y_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_y_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_z_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_z_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <pn_gen/M_z_q_5> of sequential type is unconnected in block <mojo_top_0>.
+FlipFlop reset_cond/M_stage_q_3 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 83
+ Flip-Flops                                            : 83
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top_0.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 384
+#      GND                         : 7
+#      INV                         : 13
+#      LUT1                        : 138
+#      LUT2                        : 5
+#      LUT3                        : 4
+#      LUT4                        : 7
+#      LUT5                        : 9
+#      LUT6                        : 6
+#      MUXCY                       : 138
+#      VCC                         : 6
+#      XORCY                       : 51
+# FlipFlops/Latches                : 85
+#      FD                          : 8
+#      FDE                         : 7
+#      FDR                         : 30
+#      FDRE                        : 28
+#      FDS                         : 7
+#      FDSE                        : 3
+#      LD                          : 1
+#      LDE                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 1
+#      OBUF                        : 14
+#      OBUFT                       : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              85  out of  11440     0%  
+ Number of Slice LUTs:                  182  out of   5720     3%  
+    Number used as Logic:               182  out of   5720     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    197
+   Number with an unused Flip Flop:     112  out of    197    56%  
+   Number with an unused LUT:            15  out of    197     7%  
+   Number of fully used LUT-FF pairs:    70  out of    197    35%  
+   Number of unique control sets:        17
+
+IO Utilization: 
+ Number of IOs:                          28
+ Number of bonded IOBs:                  22  out of    102    21%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------------+---------------------------------+-------+
+Clock Signal                                                                      | Clock buffer(FF name)           | Load  |
+----------------------------------------------------------------------------------+---------------------------------+-------+
+M_pn_gen_next(M_pn_gen_next<1>1:O)                                                | NONE(*)(chosenClk)              | 1     |
+chosenClk                                                                         | BUFG                            | 28    |
+clk                                                                               | BUFGP                           | 53    |
+Mram_M_clkreg_out[2]_GND_20_o_Mux_22_o(Mram_M_clkreg_out[2]_GND_20_o_Mux_22_o11:O)| NONE(*)(mypropogater/clkinvalue)| 1     |
+mypropogater/clkinvalue                                                           | NONE(mypropogater/ctr/M_ctr_q_1)| 2     |
+----------------------------------------------------------------------------------+---------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.868ns (Maximum Frequency: 348.675MHz)
+   Minimum input arrival time before clock: 3.598ns
+   Maximum output required time after clock: 6.641ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'chosenClk'
+  Clock period: 2.465ns (frequency: 405.679MHz)
+  Total number of paths / destination ports: 265 / 28
+-------------------------------------------------------------------------
+Delay:               2.465ns (Levels of Logic = 23)
+  Source:            M_seed_q_0 (FF)
+  Destination:       M_seed_q_21 (FF)
+  Source Clock:      chosenClk rising
+  Destination Clock: chosenClk rising
+
+  Data Path: M_seed_q_0 to M_seed_q_21
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             2   0.525   0.725  M_seed_q_0 (M_seed_q_0)
+     INV:I->O              1   0.255   0.000  Mcount_M_seed_q_lut<0>_INV_0 (Mcount_M_seed_q_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Mcount_M_seed_q_cy<0> (Mcount_M_seed_q_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<1> (Mcount_M_seed_q_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<2> (Mcount_M_seed_q_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<3> (Mcount_M_seed_q_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<4> (Mcount_M_seed_q_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<5> (Mcount_M_seed_q_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<6> (Mcount_M_seed_q_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<7> (Mcount_M_seed_q_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<8> (Mcount_M_seed_q_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<9> (Mcount_M_seed_q_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<10> (Mcount_M_seed_q_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<11> (Mcount_M_seed_q_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<12> (Mcount_M_seed_q_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<13> (Mcount_M_seed_q_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<14> (Mcount_M_seed_q_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<15> (Mcount_M_seed_q_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<16> (Mcount_M_seed_q_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<17> (Mcount_M_seed_q_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<18> (Mcount_M_seed_q_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_seed_q_cy<19> (Mcount_M_seed_q_cy<19>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_M_seed_q_cy<20> (Mcount_M_seed_q_cy<20>)
+     XORCY:CI->O           1   0.206   0.000  Mcount_M_seed_q_xor<21> (Result<21>)
+     FDRE:D                    0.074          M_seed_q_21
+    ----------------------------------------
+    Total                      2.465ns (1.740ns logic, 0.725ns route)
+                                       (70.6% logic, 29.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.858ns (frequency: 349.895MHz)
+  Total number of paths / destination ports: 454 / 91
+-------------------------------------------------------------------------
+Delay:               2.858ns (Levels of Logic = 3)
+  Source:            reset_cond/M_stage_q_3_1 (FF)
+  Destination:       clk_gen/M_w_q_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: reset_cond/M_stage_q_3_1 to clk_gen/M_w_q_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.525   0.682  M_stage_q_3_1 (M_stage_q_3_1)
+     end scope: 'reset_cond:M_stage_q_3_1'
+     LUT3:I2->O           12   0.254   1.069  Mmux_M_pn_gen_rst11 (M_pn_gen_rst)
+     begin scope: 'clk_gen:rst'
+     LUT5:I4->O            1   0.254   0.000  Mmux_M_w_d121 (M_w_d<1>)
+     FDE:D                     0.074          M_w_q_1
+    ----------------------------------------
+    Total                      2.858ns (1.107ns logic, 1.751ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mypropogater/clkinvalue'
+  Clock period: 2.868ns (frequency: 348.675MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.868ns (Levels of Logic = 1)
+  Source:            mypropogater/ctr/M_ctr_q_0 (FF)
+  Destination:       mypropogater/ctr/M_ctr_q_0 (FF)
+  Source Clock:      mypropogater/clkinvalue rising
+  Destination Clock: mypropogater/clkinvalue rising
+
+  Data Path: mypropogater/ctr/M_ctr_q_0 to mypropogater/ctr/M_ctr_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             22   0.525   1.333  M_ctr_q_0 (M_ctr_q_0)
+     INV:I->O              1   0.255   0.681  Mcount_M_ctr_q_xor<0>11_INV_0 (Result<0>5)
+     FDR:D                     0.074          M_ctr_q_0
+    ----------------------------------------
+    Total                      2.868ns (0.854ns logic, 2.014ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              3.598ns (Levels of Logic = 3)
+  Source:            rst_n (PAD)
+  Destination:       reset_cond/M_stage_q_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst_n to reset_cond/M_stage_q_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O              6   0.255   0.875  M_reset_cond_in1_INV_0 (M_reset_cond_in)
+     begin scope: 'reset_cond:in'
+     FDS:S                     0.459          M_stage_q_0
+    ----------------------------------------
+    Total                      3.598ns (2.042ns logic, 1.556ns route)
+                                       (56.8% logic, 43.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              5.054ns (Levels of Logic = 4)
+  Source:            myreg/M_regs_q_0 (FF)
+  Destination:       low1 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: myreg/M_regs_q_0 to low1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.525   0.681  M_regs_q_0 (M_regs_q_0)
+     end scope: 'myreg:out<0>'
+     begin scope: 'mypropogater:num<0>'
+     INV:I->O              1   0.255   0.681  numOut<0>1_INV_0 (numOut<0>)
+     end scope: 'mypropogater:numOut<0>'
+     OBUF:I->O                 2.912          low1_OBUF (low1)
+    ----------------------------------------
+    Total                      5.054ns (3.692ns logic, 1.362ns route)
+                                       (73.1% logic, 26.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mypropogater/clkinvalue'
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Offset:              6.641ns (Levels of Logic = 3)
+  Source:            mypropogater/ctr/M_ctr_q_1 (FF)
+  Destination:       high1 (PAD)
+  Source Clock:      mypropogater/clkinvalue rising
+
+  Data Path: mypropogater/ctr/M_ctr_q_1 to high1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             21   0.525   1.418  M_ctr_q_1 (M_ctr_q_1)
+     end scope: 'mypropogater/ctr:value<1>'
+     end scope: 'mypropogater:rowLit<1>'
+     LUT2:I0->O           33   0.250   1.536  M_pn_gen_next<1>1 (M_pn_gen_next)
+     OBUF:I->O                 2.912          high1_OBUF (high1)
+    ----------------------------------------
+    Total                      6.641ns (3.687ns logic, 2.954ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock M_pn_gen_next
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.076|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Mram_M_clkreg_out[2]_GND_20_o_Mux_22_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.076|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock chosenClk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+chosenClk              |    2.465|         |         |         |
+clk                    |    2.553|         |         |         |
+mypropogater/clkinvalue|    4.031|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+chosenClk              |    2.034|         |         |         |
+clk                    |    2.858|         |         |         |
+mypropogater/clkinvalue|    4.031|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mypropogater/clkinvalue
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+clk                    |    2.553|         |         |         |
+mypropogater/clkinvalue|    2.868|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.23 secs
+ 
+--> 
+
+Total memory usage is 345088 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  280 (   0 filtered)
+Number of infos    :   30 (   0 filtered)
+

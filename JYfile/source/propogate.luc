@@ -1,0 +1,98 @@
+global RowNumb{
+  const ROW1 = 2b00;
+  const ROW2= 2b01;
+  const ROW3= 2b10;
+  const ROW4 = 2b11; 
+}
+
+
+
+
+module propogate (
+    input clk,  // clock
+    input clkinput[3],
+    input rst,  // reset
+    input num[3], //LED column to light up on each row
+    output rowLit[2], //the row to be lit up (ctr.value)
+    output numOut[3], //LED column that should be lit up on the active row
+    output row1,
+    output row2,
+    output row3 //which row should be active
+  ) {
+
+  sig clkinvalue; 
+  
+  .clk(clk){
+  .rst(rst){
+        counter slowclk21(#SIZE(1),#DIV(21));
+        counter slowclk22(#SIZE(1),#DIV(22));
+        counter slowclk23(#SIZE(1),#DIV(23));
+        counter slowclk24(#SIZE(1),#DIV(24));
+        counter slowclk25(#SIZE(1),#DIV(25));
+    }
+  } 
+
+ .clk(clkinvalue) {
+    .rst(rst){
+        counter ctr(#SIZE(2));
+    }
+    
+  }
+ 
+   
+  always{
+  
+    case(clkinput){
+      ClkNumb.SLOWCLK21:
+      clkinvalue =  slowclk21.value;
+      ClkNumb.SLOWCLK22:
+      clkinvalue=  slowclk22.value;
+      ClkNumb.SLOWCLK23:
+      clkinvalue = slowclk23.value;
+      ClkNumb.SLOWCLK24:
+      clkinvalue = slowclk24.value;
+      ClkNumb.SLOWCLK25:
+      clkinvalue = slowclk25.value;
+    }
+   
+   
+  //instantiate values 
+  //numOut=2b00;
+  row1=0;
+  row2=0;
+  row3=0;
+    numOut[0] = ~num[0];
+    numOut[1] = ~num[1];
+    numOut[2] = ~num[2];
+    rowLit = ctr.value;
+    
+    case (ctr.value){
+      RowNumb.ROW1:
+          row1=1;
+          row2=0;
+          row3=0;
+   
+      RowNumb.ROW2:
+      //light up row 2 with specified numbers
+        row1=0;
+        row2=1;
+        row3=0;
+        
+      RowNumb.ROW3:
+      //light up row 3 with active numbers
+        row1=0;
+        row2=0;
+        row3=1;
+        
+        RowNumb.ROW4:
+      //light up row 3 with active numbers
+        row1=0;
+        row2=0; //change to all 0 after debugging
+        row3=0;
+        
+       
+    }
+    
+    
+  }
+}
