@@ -5,9 +5,9 @@ module bishibashi_detector #(
   )(
     input clk,  // clock
     input bish, // left button
-    input bash, // right button
-    input shi,  // center button
-    output out
+    input bash, // central button
+    input shi,  //right most button
+    output out[3]
   ) {
  .clk(clk) {
     edge_detector edge_detector_bish(#RISE(1), #FALL(0)); // detect rising edges
@@ -33,7 +33,7 @@ module bishibashi_detector #(
     edge_detector_bash.in = button_cond_bash.out; // input to the edge_detector
     button_cond_shi.in = shi;            // raw button input
     edge_detector_shi.in = button_cond_shi.out; // input to the edge_detector
-    out = 0;
+    out = 3b0;
     if(!&ctr.q){
       ctr.d = ctr.q +1 ;
       out = edge_detector_bish.out*4 + edge_detector_shi.out*2 + edge_detector_bash.out;

@@ -1,20 +1,13 @@
-global RowNumb{
-  const ROW1 = 2b00;
-  const ROW2= 2b01;
-  const ROW3=2b11;
-}
-
-
 module mojo_top (
 //pressing buttons will make the LED lights light up
     input clk,              // 50MHz clock
     input rst,            // reset button (active low)
-    output high2,
-    output high1,
-    output high3,
-    output low1,
-    output low2,
-    input cclk,             // configuration clock, AVR ready when high
+    //output high2,
+    //output high1,
+    //output high3,
+    //output low1,
+    //output low2,
+    //input cclk,             // configuration clock, AVR ready when high
     output spi_miso,        // AVR SPI MISO
     input spi_ss,           // AVR SPI Slave Select
     input spi_mosi,         // AVR SPI MOSI
@@ -23,8 +16,12 @@ module mojo_top (
     input avr_tx,           // AVR TX (FPGA RX)
     output avr_rx,          // AVR RX (FPGA TX)
     input avr_rx_busy,       // AVR RX buffer full
-    input button,
-    input button2
+    output led[8],
+    input bish,
+    input bash,
+    input shi,
+    output io_led[3][8],
+    input io_dip[3][8]
   ) {
   
   //LED[ctr][b]
@@ -38,7 +35,6 @@ module mojo_top (
   //all the highs corresponding to the row will be 'activated'
   //rand[2] is the configuration randomly generated
   //it is controlled by the 'low' wires
-  sig rand[2];
   
   .clk(clk) {
     .rst(rst){
@@ -46,46 +42,30 @@ module mojo_top (
     //div is 26 (so its slow enough for you to see)
     //testing cricuit is only 3 rows (
       counter ctr(#DIV(20),#SIZE(2));
+      main myBishiBashi;
+      
     //ctr value corresponds to a (row chosen)
     }
     //pn_gen pn_gen;
   }
    
   always{
-  high1=0;
-  high2=0;
-  high3=0;
-    //only generate a new number if 
-    //pn_gen.seed=seed.q;
-    //pn_gen.
-    //pn_gen.rst=rst; 
+  
+    //test the buttons 
+    myBishiBashi.bish = bish;
+    myBishiBashi.bash = bash;
+    myBishiBashi.shi = shi;
     
-    rand = 2b10;
-    case (ctr.value){
-      RowNumb.ROW1:
-      //row 1 is active, the rest are not active;
-        high1=1;
-        high2=0;
-        high3=0;
-        
-      RowNumb.ROW2:
-        high1=0;
-        high2=1;
-        high3=0;
-        
-      RowNumb.ROW3:
-        high1=0;
-        high2=0;
-        high3=1;
-        
-    }
+    led[0] = myBishiBashi.out[0];
+    led[1] = myBishiBashi.out[1];
+    led[2] = myBishiBashi.out[2];
+    led[7:3] = 4b0;
     
-    //if we want to activate "low"s we do it by making it low
-    //so put inverter
-    low1=~rand[0];
-    low2=~rand[1];
-        
-
+     io_led = 3x{{8h00}};    // turn LEDs off
+     io_led[2][7] = io_dip[2][7];
+    
+    
+  
     spi_miso = bz;          // not using SPI
     spi_channel = bzzzz;    // not using flags
     avr_rx = bz;            // not using serial port

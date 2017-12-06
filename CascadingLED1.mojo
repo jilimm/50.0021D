@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="CascadingLED1" board="Mojo V3" language="Lucid">
   <files>
-    <src>pngenstate.luc</src>
+    <src>randomize.luc</src>
     <src>main.luc</src>
     <src>bishibashi_detector.luc</src>
-    <src>randomize.luc</src>
     <src top="true">mojo_top.luc</src>
     <src>propogate.luc</src>
     <ucf>custom.ucf</ucf>

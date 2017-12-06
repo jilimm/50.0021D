@@ -1,3 +1,4 @@
+
 global RowNumb{
   const ROW1 = 2b00;
   const ROW2= 2b01;
@@ -6,11 +7,14 @@ global RowNumb{
 
 
 module propogate (
+//THIS MODULE WILL PROPOGATE RANDOMLY GENERATED 
+//NUMBER SEQUENCE DOWN THE COULUMN!!!!
+
     input clk,  // clock
     input rst,  // reset
-    input num[2], //LEDs to light up on each row
+    input num[3], //LEDs to light up on each row
     output rowLit[2], //the row to be lit up (ctr.value)
-    output numOut[2], //LEDs that should be lit up on the active row
+    output numOut[3], //LEDs that should be lit up on the active row
     output row1,
     output row2,
     output row3 //which row should be active
@@ -24,12 +28,13 @@ module propogate (
    
   always{
   //instantiate values 
-  numOut=2b00;
+  numOut=3b0;
   row1=0;
   row2=0;
   row3=0;
     numOut[0] = ~num[0];
     numOut[1] = ~num[1];
+    numOut[2] = ~num[2];
     rowLit = ctr.value;
     
     case (ctr.value){

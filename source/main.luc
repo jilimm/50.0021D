@@ -4,22 +4,27 @@ module main (
     input bish, // left button
     input bash, // right button
     input shi,  // center button
-    output out
+    output out[3]
   ) {
   
-  .clk(clk) {
+   .clk(clk) {
     bishibashi_detector bibashi;
     .rst(rst){
     
      }
   }
   always {
-    out = 0;
+    out = 3b0;    
     bibashi.bish = bish;
     bibashi.bash = bash;
     bibashi.shi = shi;
     if(bibashi.out != 0){
-    out = bibashi.out;
+    out[0] = bibashi.out[0];
+      out[1] = bibashi.out[1];
+      out[2] = bibashi.out[2];
+      //****ERROR****
+      //bibashi.out is not a three bit number
+      
     //check if clk counter 9<x<11
       // if inside, check if bibashi.out same value, out = points 
       // if outside, out = halt value
